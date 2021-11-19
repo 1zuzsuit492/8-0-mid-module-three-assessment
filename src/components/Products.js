@@ -1,11 +1,21 @@
-/*product 1 img src='https://w7.pngwing.com/pngs/621/960/png-transparent-air-jordan-shoe-nike-toe-clothing-jordan-white-outdoor-shoe-sneakers.png'
-cost: $190.00 --chicago j1--
+import productData from "../data/productData";
+import formatPrice from "../helpers/formatPrice";
 
-product 2 img src='https://www.vhv.rs/dpng/d/412-4127415_transparent-ps4-controller-png-ps4-dualshock-4-gold.png'
-cost: $60.00 --p4 controller--
+const Products = (props) => {
+  let items = [];
+  productData.forEach((item) => {
+    items.push(
+      <div className="product">
+        <h2>{item.name}</h2>
+        <p>Price: {formatPrice(item.price)}</p>
+        <button type="submit" onClick={props.addToCart} name={item.name}
+          value={item.price}>Add To Cart</button><p/>
+        <img src={item.img} />
+        <p>{item.description}</p>
+      </div>
+    );
+  });
+  return <div className="products">{itemArr}</div>;
+};
 
-
-
-product 3 img src='https://www.pngkit.com/png/detail/524-5240690_supreme-x-the-north-face-atlas-expedition-coaches.png'
-cost: 
-$
+export default Products;

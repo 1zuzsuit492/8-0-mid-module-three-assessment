@@ -47,9 +47,6 @@ const addToCart = (product) =>{
   setCart([...cart, product]);
 }
 
-
-
-
   return (
     <div className='App'>
         <header>
