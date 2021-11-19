@@ -2,9 +2,8 @@ import productData from "../data/productData";
 import formatPrice from "../helpers/formatPrice";
 
 const Products = (props) => {
-  let items = [];
   productData.forEach((item) => {
-    items.push(
+    item.push(
       <div className="product">
         <h2>{item.name}</h2>
         <p>Price: {formatPrice(item.price)}</p>
@@ -15,7 +14,7 @@ const Products = (props) => {
       </div>
     );
   });
-  return <div className="products">{itemArr}</div>;
+  return <div className="products">{item}</div>;
 };
 
 export default Products;
