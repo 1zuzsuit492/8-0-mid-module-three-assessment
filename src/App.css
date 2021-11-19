@@ -1,1 +1,26 @@
+.products{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%
+    
+    
+}
 
+.products img{
+    height: 200px;
+    width: 200px;
+}
+
+button {
+    font-size: 15px;
+    padding: 10px;
+}
+
+header{
+    background-color: aquamarine;
+    height: 70px;
+    padding-top: 20px;
+    text-align: center;
+
+}
